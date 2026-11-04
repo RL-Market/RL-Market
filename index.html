@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rocket League Marked — Rocket League Services</title>
+<meta name="description" content="Rocket League Marked offers rank boosting, coaching, tournament support and ranked-ready accounts.">
+<meta name="theme-color" content="#05070b">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg"><div class="grid"></div><div class="orb one"></div><div class="orb two"></div></div>
+
+<header>
+<a class="brand" href="#"><span class="ssl">SSL</span><span class="rocketleaguemarked">ROCKET LEAGUE MARKED</span></a>
+<button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button><nav id="mainNav"><a href="#services">Services</a><a href="#calculator">Boost Calculator</a><a href="#tournament-calculator">Tournament</a><a href="#coaching-calculator">Coaching</a><a href="#reviews">Reviews</a><a href="#team">Team</a><a href="#accounts">Account Shop</a><a href="#faq">FAQ</a></nav>
+<a class="btn small" href="https://discord.gg/JukFPK7x86" target="_blank" rel="noopener noreferrer">Join Discord ↗</a>
+</header>
+
+<main>
+<section class="hero">
+<div>
+<div class="pill">● ROCKET LEAGUE MARKED · ROCKET LEAGUE</div>
+<h1>Rank up.<br><span>Stand out.</span></h1>
+<p>Boosting, coaching and ranked-ready Rocket League accounts — with every order handled through the ROCKET LEAGUE MARKED Discord.</p>
+<div class="actions"><a class="btn" href="#calculator">Calculate a price →</a><a class="ghost" href="https://discord.gg/JukFPK7x86" target="_blank" rel="noopener noreferrer">Open Discord</a></div>
+<div class="trust"><span>✓ Fast support</span><span>✓ Clear pricing</span><span>✓ Discord tickets</span></div>
+</div>
+<div class="hero-art"><div class="ssl-badge"><small>SUPERSONIC</small><strong>SSL</strong><b>ROCKET LEAGUE MARKED</b></div><div class="ball">⚽</div></div>
+</section>
+
+<section class="payment-required">
+  <div class="payment-icon">🔒</div>
+  <div>
+    <div class="eyebrow">PAYMENT POLICY</div>
+    <h3>Payment terms are confirmed before any service begins.</h3>
+    <p>Final service details and payment are confirmed through your Discord ticket.</p>
+  </div>
+</section>
+
+<section id="services" class="section">
+<div class="eyebrow">SERVICES</div><h2>Everything in one place.</h2>
+<div class="cards service-cards">
+<article class="card"><div class="icon">🚀</div><h3>Rank Boosting</h3><p>Choose your current rank and target rank to receive a clear starting quote.</p><a class="link" href="#calculator">Calculate price →</a></article>
+<article class="card"><div class="icon">🏆</div><h3>Tournament Wins</h3><p>Choose a tournament win order or get boosted to a higher tournament rank.</p><a class="link" href="#tournament-calculator">Open tournament calculator →</a></article>
+<article class="card"><div class="icon">🎓</div><h3>Coaching</h3><p>Work on mechanics, positioning, rotations and game sense with a coach.</p><a class="link" href="#coaching-calculator">Open coaching calculator →</a></article>
+<article class="card"><div class="icon">🎖️</div><h3>Season Rewards Boosting</h3><p>Reach the competitive rank needed for your seasonal rewards.</p><a class="link" href="#calculator">Open boost calculator →</a></article>
+<article class="card"><div class="icon">📈</div><h3>Placement Games</h3><p>Get support with your placement matches at the start of a new season.</p><a class="link" href="#calculator">Open boost calculator →</a></article>
+<article class="card"><div class="icon">➕</div><h3>Net Wins</h3><p>Request a custom net-wins order and confirm the details with the team.</p><a class="link" href="#calculator">Open boost calculator →</a></article>
+</div>
+</section>
+
+<section id="calculator" class="calc-section">
+<div class="calc-copy">
+<div class="eyebrow">BOOST CALCULATOR</div>
+<h2>Your quote.<br><span>Calculated instantly.</span></h2>
+<p>Choose your rank, tier, division and regular competitive gamemode to get an instant EUR starting quote. Tournament services have their own calculator below.</p>
+<div class="mini">💡 Displayed prices are starting quotes. If a quote doesn't work for you, contact ROCKET LEAGUE MARKED — orders can be negotiated.</div>
+</div>
+<div class="calculator">
+<label>Service type
+<select id="serviceType">
+<option value="account">🔐 Solo Boost — we play on your account</option>
+<option value="carry">🎮 Duo Boost — play together with our booster</option>
+<option value="netwins">➕ Net Wins</option>
+<option value="placements">📊 Placement Games</option>
+<option value="season">🏅 Season Rewards Boosting</option>
+</select>
+</label>
+<div id="rankFields">
+<div class="rank-fields"><label>Current rank<select id="currentRank"><option value="">Choose current rank</option></select></label><label>Current division<select id="currentDivision"><option>I</option><option>II</option><option>III</option><option>IV</option></select></label></div>
+<div class="rank-fields"><label>Desired rank<select id="targetRank"><option value="">Choose desired rank</option></select></label><label>Desired division<select id="targetDivision"><option>I</option><option>II</option><option>III</option><option>IV</option></select></label></div>
+<label>Game mode<select id="mode"><option>1v1</option><option>2v2</option><option>3v3</option><option>Rumble</option><option>Hoops</option><option>Snowday</option><option>Dropshot</option><option>Heatseeker</option></select></label>
+</div>
+<div id="specialFields" class="special-fields" hidden>
+<label id="specialAmountLabel">Amount<select id="specialAmount"><option value="5">5</option><option value="10">10</option><option value="15">15</option><option value="20">20</option><option value="25">25</option></select></label>
+<label id="specialDetailsLabel">Additional details<input id="specialDetails" type="text" placeholder="Optional details"></label>
+</div>
+<label>Platform<select id="platform"><option>PC</option><option>PlayStation</option><option>Xbox</option></select></label><div id="breakdown" class="breakdown">Select your ranks and divisions to calculate a quote.</div>
+<div class="total"><span>Total quote</span><strong id="total">€0.00</strong></div>
+<div id="serviceNote" class="service-note">🔐 Solo Boost: our booster plays on your account.</div>
+<button class="btn full" id="orderBtn">Order through Discord →</button>
+</div>
+</section>
+
+<section id="tournament-calculator" class="calc-section tournament-section">
+<div class="calc-copy">
+<div class="eyebrow">TOURNAMENT SERVICES</div>
+<h2>Tournament wins.<br><span>Or tournament rank boosts.</span></h2>
+<p>This calculator is dedicated to tournament orders and is separate from the regular competitive rank calculator.</p>
+<div class="mini">🏆 Tournament pricing is confirmed by the team in Discord. No unconfirmed tournament prices are displayed here.</div>
+</div>
+<div class="calculator tournament-calculator">
+<label>Tournament service
+<select id="tournamentService"><option value="win">🏆 Tournament Win</option><option value="boost">📈 Tournament Boost — reach a higher tournament rank</option></select>
+</label>
+<div id="tournamentWinFields" class="tournament-fields">
+<label>Number of tournament wins<select id="tournamentWins"><option value="1">1 tournament win</option><option value="2">2 tournament wins</option><option value="3">3 tournament wins</option><option value="4">4 tournament wins</option><option value="5">5 tournament wins</option></select></label>
+</div>
+<div id="tournamentBoostFields" class="tournament-fields" hidden>
+<div class="rank-fields"><label>Current tournament rank<select id="tournamentCurrentRank"><option value="">Choose current rank</option></select></label><label>Current division<select id="tournamentCurrentDivision"><option>I</option><option>II</option><option>III</option><option>IV</option></select></label></div>
+<div class="rank-fields"><label>Desired tournament rank<select id="tournamentTargetRank"><option value="">Choose desired rank</option></select></label><label>Desired division<select id="tournamentTargetDivision"><option>I</option><option>II</option><option>III</option><option>IV</option></select></label></div>
+</div>
+<label>Platform<select id="tournamentPlatform"><option>PC</option><option>PlayStation</option><option>Xbox</option></select></label>
+<div id="tournamentBreakdown" class="breakdown">Choose your tournament service to get started.</div>
+<div class="total"><span>Price</span><strong id="tournamentTotal">Quote on request</strong></div>
+<div class="service-note" id="tournamentNote">🏆 Tournament Win: details and price confirmed in Discord.</div>
+<button class="btn full" id="tournamentOrderBtn">Request tournament order →</button>
+</div>
+</section>
+
+<section id="coaching-calculator" class="calc-section coaching-section">
+<div class="calc-copy"><div class="eyebrow">COACHING</div><h2>Build your skills.<br><span>Your own coaching quote.</span></h2><p>Choose the coaching setup that fits your goals. The team will confirm availability and pricing in Discord.</p><div class="mini">🎓 Coaching prices are confirmed by the team. No unapproved prices are displayed.</div></div>
+<div class="calculator coaching-calculator">
+<label>Coaching format<select id="coachingFormat"><option value="1to1">1-to-1 Coaching</option><option value="duo">Duo Coaching</option><option value="replay">Replay Analysis</option><option value="training">Training Plan</option></select></label>
+<label>Session duration<select id="coachingDuration"><option>30 minutes</option><option selected>1 hour</option><option>2 hours</option></select></label>
+<label>Game mode<select id="coachingMode"><option>1v1</option><option>2v2</option><option>3v3</option><option>Rumble</option><option>Hoops</option><option>Snowday</option><option>Dropshot</option><option>Heatseeker</option></select></label>
+<label>Current rank<select id="coachingRank"><option>Unranked</option><option>Bronze</option><option>Silver</option><option>Gold</option><option>Platinum</option><option>Diamond</option><option>Champion</option><option>Grand Champion</option><option>Supersonic Legend</option></select></label>
+<label>Main improvement goal<select id="coachingGoal"><option>Mechanics</option><option>Positioning & rotations</option><option>Game sense</option><option>Consistency</option><option>Kickoffs</option><option>Replay review</option><option>Overall improvement</option></select></label>
+<label>Platform<select id="coachingPlatform"><option>PC</option><option>PlayStation</option><option>Xbox</option></select></label>
+<div class="total"><span>Price</span><strong id="coachingTotal">Quote on request</strong></div><div class="service-note">Coaching details and price will be confirmed in your Discord ticket.</div>
+<button class="btn full" id="coachingOrderBtn">Request coaching →</button></div>
+</section>
+
+<section class="section how-it-works" id="how-it-works">
+<div class="eyebrow">HOW IT WORKS</div><h2>Three simple steps.</h2>
+<div class="pricing-grid">
+<article><div class="big-icon">①</div><h3>Choose your service</h3><p>Select boosting, tournament services, coaching or an account shop enquiry. Add your rank, mode and platform where needed.</p></article>
+<article><div class="big-icon">②</div><h3>Send your request</h3><p>Use the order button to prepare your request, then open our Discord and paste it into your ticket.</p></article>
+<article><div class="big-icon">③</div><h3>Confirm the details</h3><p>Our team confirms availability, final price, delivery estimate and payment terms with you before the service begins.</p></article>
+</div>
+</section>
+
+<section class="section delivery-info" id="delivery">
+<div class="eyebrow">DELIVERY INFORMATION</div><h2>Clear expectations. No guesswork.</h2>
+<div class="delivery-panel"><div class="big-icon">⏱️</div><div><h3>Estimated delivery time is confirmed per order.</h3><p>Delivery depends on the service, requested rank or amount, game mode and current team availability. We will confirm an estimated timeframe in your Discord ticket before you decide to proceed.</p></div></div>
+</section>
+
+<section class="section pricing-info">
+<div class="eyebrow">HOW PRICING WORKS</div><h2>Pick the setup that fits.</h2>
+<div class="pricing-grid">
+<article><div class="big-icon">🔐</div><h3>Solo Boost</h3><p>Our booster plays on your account to complete the agreed rank progress.</p><b>Standard quote</b></article>
+<article><div class="big-icon">🎮</div><h3>Duo Boost</h3><p>You play together with a ROCKET LEAGUE MARKED booster. This option is charged at <strong>2× the standard quote</strong>.</p><b>2× standard quote</b></article>
+<article><div class="big-icon">📺</div><h3>Extra transparency</h3><p>Customers can request a screenshare during the service where appropriate.</p><b>Ask in your ticket</b></article>
+</div>
+</section>
+
+<section class="section">
+<div class="eyebrow">PAYMENT METHODS</div><h2>Choose your way to pay.</h2>
+<div class="payment-grid">
+<div>💎 <b>Discord Nitro</b><small>Accepted</small></div>
+<div>💳 <b>PayPal</b><small>Accepted</small></div>
+<div>🟩 <b>Robux</b><small>Accepted</small></div>
+</div>
+</section>
+
+<section id="reviews" class="section reviews">
+<div class="eyebrow">CUSTOMER REVIEWS</div><h2>Real purchases. Real feedback.</h2>
+<div class="review-grid">
+<article><div class="stars">★★★★★</div><p>“Add your real customer feedback here once you have permission to publish it.”</p><b>Review placeholder</b><small>Awaiting customer feedback</small></article>
+<article><div class="stars">★★★★★</div><p>“Customer reviews will appear here when they are available.”</p><b>Review placeholder</b><small>Awaiting customer feedback</small></article>
+</div>
+<div class="review-note">Customer feedback will be published here only with permission.</div>
+</section>
+
+<section id="team" class="section">
+<div class="eyebrow">THE TEAM</div><h2>Meet the team.</h2>
+<div class="team-grid">
+<article><img class="avatar" src="assets/owner-avatar.jpg" alt="Budyyyy profile picture"><h3>Budyyyy</h3><p>@chillingdawg</p><span>Owner</span></article>
+</div>
+</section>
+
+<section id="accounts" class="section accounts">
+<div class="eyebrow">ACCOUNT SHOP</div><h2>Ranked-ready accounts.</h2>
+<div class="account-grid">
+<div><b>Steam Accounts</b><span>Ready to purchase</span></div>
+<div><b>Ranked-Ready</b><span>Pre-ranked accounts</span></div>
+<div><b>Champion</b><span>Champ accounts</span></div>
+<div><b>Grand Champion</b><span>GC accounts</span></div>
+<div><b>SSL</b><span>Supersonic Legend accounts</span></div>
+</div>
+<a class="btn" href="https://discord.gg/JukFPK7x86" target="_blank" rel="noopener noreferrer">Ask about availability →</a>
+</section>
+
+<section id="faq" class="section faq">
+<div class="eyebrow">FAQ</div><h2>Questions?</h2>
+<details><summary>When do I pay?</summary><p>Payment terms are confirmed with the team before an order is started. Final details and payment are confirmed through your Discord ticket.</p></details>
+<details><summary>Can prices be negotiated?</summary><p>Yes. Calculator amounts are starting quotes. If a quote doesn't work for you, contact ROCKET LEAGUE MARKED through Discord and ask about a custom price.</p></details>
+<details><summary>What is the difference between Solo Boost and Duo Boost?</summary><p>Solo Boost means a ROCKET LEAGUE MARKED booster plays on your account at the standard quote. Duo Boost means you play together with our booster and is charged at 2× the standard quote.</p></details>
+<details><summary>Can I request a screenshare?</summary><p>Yes. Ask the team in your Discord ticket and screenshare can be arranged where appropriate.</p></details>
+<details><summary>What payment methods do you accept?</summary><p>Discord Nitro, PayPal, and Robux.</p></details>
+<details><summary>Where can I buy accounts?</summary><p>Open the ROCKET LEAGUE MARKED Discord and ask the team about current availability.</p></details>
+<details><summary>Which platforms do you support?</summary><p>The website currently accepts PC, PlayStation and Xbox requests. Confirm any platform-specific requirements with the team in your Discord ticket.</p></details>
+<details><summary>How long will my order take?</summary><p>Estimated delivery depends on the service and team availability. The team will confirm an estimate in your Discord ticket before the service begins.</p></details>
+<details><summary>How do I place an order?</summary><p>Choose your service and options, press the order button, then paste the prepared request into your ROCKET LEAGUE MARKED Discord ticket.</p></details>
+<details><summary>Are calculator prices final?</summary><p>Regular boosting calculator amounts are starting quotes. Tournament, coaching and custom service prices are confirmed by the team in Discord before you proceed.</p></details>
+</section>
+
+<section class="cta"><div class="eyebrow">ROCKET LEAGUE MARKED DISCORD</div><h2>Ready to get started?</h2><a class="btn" href="https://discord.gg/JukFPK7x86" target="_blank" rel="noopener noreferrer">Join ROCKET LEAGUE MARKED →</a></section>
+</main>
+<footer><span>© 2026 ROCKET LEAGUE MARKED</span><span>Rocket League services</span></footer>
+<script src="script.js"></script>
+</body></html>
